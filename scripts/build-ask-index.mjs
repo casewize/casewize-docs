@@ -44,9 +44,15 @@ if (key) {
   })
   embedded = true
 } else {
-  console.warn(
-    "ask-index: OPENAI_API_KEY not set — writing a keyword-only index.",
-  )
+  console.warn("ask-index: OPENAI_API_KEY not set — writing a keyword-only index.")
+
+  /** On a deploy this silently downgrades retrieval, so say so loudly. */
+  if (wasEmbedded()) {
+    console.warn(
+      "ask-index: the previous index HAD embeddings. Ask AI will fall back to\n" +
+        "ask-index: keyword matching until the key is set and this is rebuilt.",
+    )
+  }
 }
 
 writeFileSync(
@@ -59,6 +65,14 @@ writeFileSync(
 )
 
 console.log(`ask-index: wrote ${relative(ROOT, OUT_FILE)} (embedded: ${embedded})`)
+
+function wasEmbedded() {
+  try {
+    return JSON.parse(readFileSync(OUT_FILE, "utf8")).embedded === true
+  } catch {
+    return false
+  }
+}
 
 /** Reads .env / .env.local without a dependency, leaving real env vars alone. */
 function loadEnv() {

@@ -15,6 +15,9 @@ import askIndex from "../../../data/ask-index.json"
 export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
 
+/** A streamed answer outlives the 10s a serverless function gets by default. */
+export const maxDuration = 60
+
 const EMBEDDING_MODEL = "text-embedding-3-small"
 const ANSWER_MODEL = process.env.OPENAI_DOCS_MODEL ?? "gpt-4.1-mini"
 const TOP_K = 6

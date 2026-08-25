@@ -67,6 +67,41 @@ app/_components/ask-ai.tsx        — the panel in the navbar (Ctrl/Cmd + I)
 The index is roughly 2.5 MB for ~40 pages. Rebuilding it costs one embeddings
 call per 96 chunks.
 
+## Deploying to Vercel
+
+A standalone Next.js app, so framework detection handles it. No `vercel.json`
+needed.
+
+```bash
+npx vercel link                             # or import the repo in the dashboard
+npx vercel env add OPENAI_API_KEY production
+npx vercel env add OPENAI_API_KEY preview
+npx vercel --prod
+```
+
+**Root directory** — `casewize-docs` is its own git repo, so the Vercel project
+root is the repo root. If it is ever folded into a monorepo alongside
+`casewize-v2`, set the project's Root Directory to `casewize-docs`.
+
+**Environment variables** — `OPENAI_API_KEY` is needed at **build time** (the
+embedding index) and at **runtime** (the Ask AI route). Vercel exposes variables
+to both by default. `OPENAI_DOCS_MODEL` is optional.
+
+If the key is missing at build time the build still succeeds, but
+`build-ask-index.mjs` writes a keyword-only index and Ask AI silently degrades to
+keyword matching. The script warns loudly when it does that.
+
+**Search** — Pagefind runs in `postbuild` and writes into `public/_pagefind`
+after `next build`. Vercel collects `public/` once the build command has
+finished, so those files are served — Nextra's own site is deployed this way. If
+search ever 404s in production, check the deployment's Output tab for
+`_pagefind/` before looking anywhere else.
+
+**The Ask AI function** — `/api/ask` is the only serverless function; all 42 doc
+pages are static. It declares `maxDuration = 60`, because a streamed answer
+outlives the 10s a function gets by default. The index is bundled into the
+function, well inside Vercel's size limit.
+
 ## Notes
 
 - `zod` is pinned to `4.1.13` in `overrides`. Nextra 4.6's prop schemas fail
