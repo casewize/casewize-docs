@@ -1,0 +1,75 @@
+---
+title: Review, withdraw, bulk changes
+description: Marking documents reviewed, taking one off a matter without destroying it, and changing many at once.
+---
+
+import { Callout } from "nextra/components"
+
+# Review, withdraw, bulk changes
+
+## Review state
+
+Three states, in the **Review** column:
+
+| State | Meaning |
+| --- | --- |
+| **Unreviewed** | Nobody has signed off on it yet. |
+| **Reviewed** | Read and stood behind. Records who read it, and when. |
+| **Released** | Released to the client. |
+
+**Mark reviewed** and **Undo review** are on the row menu. Marking a document
+reviewed is not sharing it — that is a separate decision, made by the lead
+attorney from the Documents tab.
+
+## Withdrawing a document
+
+**Withdraw from the matter** takes a document off the matter. It stops appearing
+in the document list and the analysis no longer opens it.
+
+<Callout type="info">
+  Nothing is destroyed. The document and its original file are kept in full, and
+  this can be undone with **Restore**. The same file may also be filed on
+  another matter — withdrawing it here does not touch that one.
+</Callout>
+
+A **reason** is required. It is kept with the document and written to the audit
+log, because whoever asks about this later is asking exactly that.
+
+Two things block a withdrawal:
+
+- **The document has been released to the client.** Revoke that release first.
+- **Somebody changed the document while your screen was open.** Reload and try
+  again.
+
+## Bulk changes
+
+Select documents with the row checkboxes. The bulk bar offers:
+
+**Reclassify** — type, origin and each sensitivity flag, every control
+three-way: *leave*, *set*, *clear*. Anything left alone stays as it is. Titles
+and dates are not offered, because they are facts about one document. Each
+change is written to the audit log against its own document.
+
+**Read again** — queues the whole selection for reading.
+
+**Withdraw** — one typed reason covers the set, and is kept with every document
+in it.
+
+**Release stays one document at a time.** There is no bulk release.
+
+## The document detail sheet
+
+Opening a document's details shows everything filed behind it:
+
+- Document date, date filed, how it arrived, page count, size, fingerprint.
+- Review state, with what that state currently permits.
+- Versions, with who filed each.
+- Where it came from — one row per arrival.
+- Related documents.
+- **Access history**, append-only. Each line records the role its actor held at
+  the time, not the role they hold now.
+
+The audit lines you will see: opened it, changed its details, withdrew it, put
+it back, released it to the client, asked for it to be read again, answered a
+duplicate match, recorded another arrival, marked it reviewed, took the review
+back.

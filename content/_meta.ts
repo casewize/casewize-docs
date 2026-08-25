@@ -1,0 +1,16 @@
+export default {
+  index: { title: "Welcome", theme: { toc: false } },
+  start: "Getting started",
+  matters: "Matters",
+  documents: "Documents",
+  analysis: "Analysis",
+  chronology: "Chronology",
+  team: "Team & access",
+  "client-portal": "Client portal",
+  tasks: "Tasks",
+  messaging: "Messaging",
+  notifications: "Notifications",
+  firm: "Firm settings",
+  account: "Your account",
+  reference: "Reference",
+}

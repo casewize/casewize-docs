@@ -1,0 +1,86 @@
+---
+title: Signing in
+description: Accounts, invitations, two-factor authentication and re-authentication before irreversible acts.
+---
+
+import { Callout } from "nextra/components"
+
+# Signing in
+
+## Getting an account
+
+You reach CaseWize one of four ways, and which one you took decides what you see.
+
+**Invited by your firm.** A colleague with the right role sends an invitation to
+your work email. The link expires in seven days, and joining through it verifies
+your address. Your role is set on the invitation.
+
+**You opened the firm.** Signing up directly makes you the firm owner of a new
+firm, on a 30-day trial.
+
+**Invited as a client.** A matter's lead attorney invites you to that matter's
+portal. The invitation names the firm, never the matter. You get your own
+account — never a shared login — and you see what has been released to you.
+
+**Granted access as an outsider.** An expert or co-counsel is granted a named
+set of documents on one matter, with an expiry date the field will not let
+anyone leave blank.
+
+## Two-factor authentication
+
+A firm can require a second factor of every member. If yours does, nothing else
+in the product opens until you have set one up — the requirement applies on your
+next request, not at your next sign-in.
+
+Setting it up: scan the code with any TOTP app (Google Authenticator,
+1Password, Authy), save the backup codes somewhere that is not the phone you
+just enrolled, then confirm with a code from the app. The first accepted code is
+what switches it on.
+
+- A code is not asked for on a device you marked as trusted, for thirty days.
+- Backup codes work once each and are never shown again.
+- Generating a new set invalidates the old set immediately.
+- If your firm requires two-factor, you cannot turn it off yourself. An
+  administrator can lift the firm requirement.
+
+<Callout type="warning">
+  If a code is rejected, check your phone's clock. Codes change every 30 seconds
+  and a drifting clock is the usual cause. Too many failed codes locks the
+  account for a short period.
+</Callout>
+
+## Being asked for your password again
+
+Some acts cannot be undone, and your firm can require your password again at the
+moment of the act rather than trusting the session. The three it can cover:
+
+- changing a colleague's role,
+- deactivating a member,
+- weakening the authentication policy itself.
+
+Strengthening the policy never asks. See
+[Authentication](/firm/authentication) for who configures this.
+
+## Sessions and devices
+
+**Your account → Where you are signed in** lists every session, with the device
+and when it started. Revoke any you do not recognise. Revoking takes effect on
+that device's next request, not at its next sign-in.
+
+Changing your password ends every other session immediately.
+
+## Switching firms
+
+If you hold a seat at more than one firm, the workspace switcher at the top of
+the sidebar moves between them. Each firm sets its own authentication
+requirements, so another one may ask you to enrol too. Invitations waiting on
+you appear in the same menu.
+
+## When something goes wrong
+
+| Message | What it means |
+| --- | --- |
+| Your seat at this firm could not be confirmed | Your membership changed while you were signed in. Sign in again. |
+| Seat suspended | An administrator deactivated your seat at that firm. |
+| Too many attempts. Please wait a moment | Rate limiting. It clears on its own. |
+| That password is not right | Step-up re-authentication failed; the act was not performed. |

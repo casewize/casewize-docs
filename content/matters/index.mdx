@@ -1,0 +1,113 @@
+---
+title: Opening a matter
+description: The four-step intake, the three blockers that stand between a draft and a live matter, and what activating writes.
+---
+
+import { Callout, Steps } from "nextra/components"
+
+# Opening a matter
+
+**New case** starts a four-step intake. It is saved as a draft the moment you
+continue past step 1, and only you can see your own drafts — they appear on the
+case list under *Your unfinished intakes*. A draft is a lead, not a case.
+
+Only a licensed attorney or the firm owner can take a matter on.
+
+## Step 1 — The matter
+
+Nothing here is checked yet.
+
+| Field | Notes |
+| --- | --- |
+| **Internal number** | Yours, assigned now. Unique within the firm — a second matter cannot take the same string. |
+| **Court number** | Stays empty until a suit is filed. A case is real before a court knows about it. |
+| **Case title** | How the matter reads everywhere in the product. |
+| **Matter type** | The types your firm takes are listed first; every other type is below them. |
+| **Jurisdiction** | |
+| **Court** | |
+| **Phase** | Where the matter actually stands today, not where it starts on paper. |
+
+## Step 2 — Parties and conflicts
+
+Covered in full on [Parties and conflicts](/matters/parties). In short: the
+conflict check has nothing to search until at least the client is attached, and
+it re-runs every time a party is added or removed.
+
+## Step 3 — Deadline and lead
+
+The two fields the database will not let an active matter go without.
+
+**Statute deadline** — the final date by which the firm must file. No override,
+no TBD. A missed statute of limitations kills the claim permanently.
+
+**Lead attorney** — only members holding a bar number appear in this list. The
+same licence is what grants the right to approve an AI run later.
+
+<Callout type="info">
+  Not in the list yourself? If your bar number is not on file, record it and the
+  state that issued it on **Your account** and you will be taken straight back
+  to this step. If you are not an attorney or firm owner, you cannot lead a
+  matter at all — ask an attorney to take it on.
+</Callout>
+
+## Step 4 — Review and activate
+
+The review step shows everything you entered, who will be able to open the
+matter, the retention it inherits from the firm profile, and exactly what
+pressing **Activate** writes:
+
+<Steps>
+
+### The row flips to active
+
+With your id on it permanently as the creator. That does not change if you later
+leave the matter, or the firm.
+
+### The parties and their roles are kept
+
+A party the firm already knows keeps its history; a new one starts its own.
+
+### The conflict result and your reason are kept
+
+Kept whether it came back clear or not, so the decision to proceed is as
+recoverable as the decision not to.
+
+### The access rows are computed
+
+Two, to begin with — you and the lead. Every later grant, wall or role change
+recomputes them rather than being read on the fly at request time.
+
+</Steps>
+
+## The three blockers
+
+A draft cannot go active until all three are satisfied. The review step tracks
+them as *Still outstanding*.
+
+1. **A statute deadline.**
+2. **A lead attorney.**
+3. **A cleared conflict check** — run, and either clear or cleared in writing by
+   an attorney.
+
+The first two are constraints on the row itself: an active matter without them
+simply fails to save, whatever the screen does. The third is the product's own —
+a firm can be made to record a decision, and cannot be made to make a good one.
+
+## Who can open it once it is live
+
+**You** — as creator: write, and manage the team.
+
+**The lead** — approve, release, and manage the team.
+
+**Everyone else at the firm** — no access row, so no trace. Not in counts, not
+in search.
+
+<Callout type="info">
+  Being firm owner is not access to a matter. It is a ceiling on what you could
+  do once somebody puts you on one.
+</Callout>
+
+## Discarding a draft
+
+**Discard draft** on the review step removes it. Nothing was ever live, so
+nothing is retained.

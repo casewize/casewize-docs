@@ -1,0 +1,88 @@
+---
+title: Tasks
+description: The task board, its four layouts, saved views, dependencies, and where tasks come from.
+---
+
+import { Callout } from "nextra/components"
+
+# Tasks
+
+A task belongs to a matter. Only the title is required.
+
+## Where a task comes from
+
+| Source | |
+| --- | --- |
+| **Added by hand** | Somebody created it. |
+| **From a template** | Raised by a rule. |
+| **From intake** | Created when the matter was opened. |
+| **From the analysis** | A recommended action somebody turned into a task. |
+
+## Fields
+
+Title, detail, **kind** (filing, discovery, review, evidence, client, court,
+internal), **priority** (low, normal, high, critical), assignee, **start** and
+**due** dates, and **critical deadline**.
+
+<Callout type="warning">
+  A **critical deadline** pins the task to the top of every board in the firm
+  and cannot be muted. It needs a date.
+</Callout>
+
+## Status
+
+To do · In progress · **Blocked** · Done · Cancelled.
+
+Marking a task blocked asks what it is blocked on, and that reason shows on the
+task until it is unblocked.
+
+## Dependencies
+
+A task can be **waiting on** other tasks and **blocking** others. The board
+refuses to create a cycle, and refuses to close a task whose prerequisites are
+still open.
+
+The timeline layout draws the links and flags any that run backwards — *a
+prerequisite is due after the work waiting on it*.
+
+## Four layouts
+
+**Table** — sortable columns, bulk selection.
+
+**Board** — kanban by status, drag between columns.
+
+**Calendar** — by due date, month at a time. Tasks with no date are counted
+below rather than dropped silently.
+
+**Timeline** — bars from start to due, at day, week, month or quarter zoom. Drag
+a bar to reschedule it, or its edges to change when the work starts and ends.
+
+## Views
+
+The built-in views: **My work**, **Board**, **Overdue**, **This week**,
+**Unassigned**, **Calendar**, **Timeline**.
+
+**Save view** keeps the filters, sort and layout exactly as they are on screen,
+with a scope:
+
+- **Just me** — nobody else sees it.
+- **This matter** — everyone on the matter, on this matter's board only.
+- **The firm** — everyone at the firm. They still only see their own work.
+
+**Make default** decides which view opens first.
+
+## Grouping, filters and bulk edits
+
+Group by any field. Filter to open only, overdue, or mine. Search by title.
+Select rows to change status, priority or assignee in bulk, or to delete —
+deleting takes the dependency links with it and cannot be undone.
+
+<Callout type="info">
+  A board that says *showing the first 200* is truncated. Narrow the filters to
+  get a complete answer rather than reading a partial one as the total.
+</Callout>
+
+## Closed matters
+
+The matter's status carries. A closed matter's tasks are read-only for every
+role.

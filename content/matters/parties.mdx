@@ -1,0 +1,75 @@
+---
+title: Parties and conflicts
+description: How parties are shared across matters, what the conflict check searches, and how a match is cleared.
+---
+
+import { Callout } from "nextra/components"
+
+# Parties and conflicts
+
+## A party exists once at the firm
+
+A party is an entity the firm knows — a person or a company — attached to a
+matter **in a role**. The same company can be the opposing party on one matter
+and a witness on another without becoming two records, and its history follows
+it.
+
+When you type a name the firm already knows, you are offered the option to
+**link** rather than create. Linking reuses that party's history everywhere it
+appears. Nothing is merged for you: if they are genuinely different entities,
+keep them separate.
+
+## The roles a party can hold
+
+Client · Plaintiff · Defendant · Opposing party · Opposing counsel · Counsel ·
+Insurer · Employer · Witness · Expert · Judge · Court · Other
+
+## The conflict check
+
+Every add and every removal re-runs the check **against every party on every
+matter the firm has ever opened**, as the system rather than as you.
+
+That distinction matters: it sees matters you cannot open. A match on a walled
+or unassigned matter is reported as a match, but the matter is not named and
+nobody on it is named. A match you cannot see is still a match.
+
+Three results:
+
+| Result | Meaning |
+| --- | --- |
+| **Clear** | Nothing matched. |
+| **Possible** | Something matched and needs a judgement. |
+| **Conflict** | A direct match. |
+
+For each match you are told the role the party held and whether the other matter
+is live or closed — and, where you have access to it, which matter.
+
+## Clearing a match
+
+An attorney has to clear it in writing before the matter can leave draft. The
+reason field is required, and the clearance is recorded with your name and the
+time. It is kept permanently, whether the check came back clear or not.
+
+<Callout type="warning">
+  The check is recorded, not decided. The product can make a firm write down why
+  it is proceeding; it cannot make that a good reason.
+</Callout>
+
+## Parties the analysis finds
+
+Once documents have been read, the analysis proposes parties it found in them —
+under **Found in the documents** on the Parties tab. Each proposal tells you
+whether the firm already knows that name, how many other matters it appears on,
+and how many documents on this matter mention it.
+
+Nothing joins the matter until you accept it. Accepting adds the party to the
+firm's records **and re-runs the conflict check**.
+
+Where the documents do not make clear which side you act for, the proposal says
+so and you switch the role yourself.
+
+## Aliases
+
+A party filed under more than one spelling is shown with *also filed as* on the
+intake screen, and the analysis's knowledge-base stage resolves the same party
+spelled several ways into one entry before any other stage reads it.

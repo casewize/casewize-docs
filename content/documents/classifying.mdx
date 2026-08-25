@@ -1,0 +1,61 @@
+---
+title: Type, origin and dates
+description: The document type list, where a document came from, and why the document date is not the date it was filed.
+---
+
+import { Callout } from "nextra/components"
+
+# Type, origin and dates
+
+## Document type
+
+The one field on the edit form that the analysis reads back. A document filed as
+a deposition is read as one.
+
+Pleading · Email · HR complaint · Performance review · Text message ·
+Termination letter · Deposition · Medical record · Expert report · Contract ·
+Correspondence · Notes · Other
+
+Untyped documents show as *Not yet typed*.
+
+## Origin
+
+Where the document came from, which is a different question from who uploaded
+it.
+
+Our client · Opposing party · Third party · Court · Public record · Our work ·
+AI generated
+
+Separately, the detail sheet records how it **arrived** — direct upload, email,
+an integration, a scan, or AI generated — one row per arrival.
+
+## Document date
+
+The date the document is *about*, not the day it was filed.
+
+<Callout type="info">
+  A 2023 medical record uploaded this morning is a 2023 document. The list sorts
+  on this, the chronology is built from it, and the analysis reasons about it.
+  Leave it empty if the document genuinely carries no date.
+</Callout>
+
+Where the extractor could not read the date confidently, the document is flagged
+**date unclear** and appears under that filter. Editing it and saving records
+your answer as the settled one.
+
+## Sorting and filtering on dates
+
+The documents toolbar switches between sorting by **document date** and by
+**date filed**, and offers all time, last 30 days, last 90 days and last 12
+months windows against whichever you picked.
+
+The side rail filters by type, origin, sensitivity and status — including
+*Date unclear* and *Could not be read*.
+
+## Editing
+
+**Edit document** from the row menu or the detail sheet. It covers the title,
+the document date, the type, the origin and the sensitivity flags.
+
+Titles and dates are facts about one document, so they are not offered in the
+bulk editor. Type, origin and sensitivity are.

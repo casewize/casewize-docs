@@ -1,0 +1,73 @@
+---
+title: Privilege and sensitivity
+description: What privileged and work-product flags actually do, how PHI and PII are treated, and why no role can override them.
+---
+
+import { Callout } from "nextra/components"
+
+# Privilege and sensitivity
+
+Four flags, two of which change what the system itself will do with the
+document.
+
+## Privileged
+
+Withheld from production **and from AI retrieval**. Its text is never retrieved,
+never quoted in an analysis, and never produced.
+
+Setting the flag asks for a **basis for the privilege claim** — for example,
+*attorney-client, advice sought from counsel on the termination*. That text is
+kept with the document.
+
+## Work product
+
+The firm's own analysis. Withheld from AI retrieval, and never reaches an
+outside grant.
+
+## Contains PHI
+
+Health information. Every open of the document is logged.
+
+## Contains PII
+
+Personal information about an identifiable person.
+
+## What the flags actually enforce
+
+<Callout type="warning">
+  Privilege and work product are **hardcoded exclusions, not permission
+  checkboxes**. No role, no grant, no plan and no setting anywhere in the
+  product turns them on for the analysis. A firm owner cannot make the engine
+  read a privileged document.
+</Callout>
+
+Concretely, while either flag stands:
+
+- the document's text is not retrievable, so no stage of an analysis can quote it;
+- it cannot be released to the client — the release button refuses;
+- it is never included in the document list an external grant can reach;
+- it counts under **Withheld** in the analysis coverage panel.
+
+## Changing a flag later
+
+Editing a document to *add* a flag tells you plainly: *this will be withheld
+from the AI*. Its text stops being retrievable and stops reaching anyone outside
+the firm.
+
+Removing a flag says the opposite: *this will be readable by the AI*. Nothing
+changes until you save; saving is what makes it eligible.
+
+<Callout type="warning">
+  A copy already released to the client cannot be recalled by flagging the
+  document. Revoke that release separately — and even revoking cannot recall
+  what has already been read.
+</Callout>
+
+## Where you see them
+
+- **Flags** column and the sensitivity filters on the document list.
+- **Handle with care** on the document detail sheet, spelling out what the flag
+  is currently doing.
+- **Withheld** in the analysis [coverage panel](/analysis/coverage), with the
+  reason.
+- The bulk editor, where each flag is a three-way control: leave, set, or clear.

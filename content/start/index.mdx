@@ -1,0 +1,80 @@
+---
+title: How CaseWize works
+description: The shape of the product — firms, matters, the case file, and the analysis engine that reads it.
+---
+
+import { Callout } from "nextra/components"
+
+# How CaseWize works
+
+## The firm is the container
+
+Everything belongs to a firm: matters, documents, people, retention, billing.
+You can hold a seat at more than one firm — the workspace switcher at the top of
+the sidebar moves between them, and nothing is shared across the boundary.
+
+Opening a new firm makes you its owner. Until a bar number is recorded on your
+account you cannot approve AI output or release anything, whatever your role
+says.
+
+## A matter is the unit of work
+
+A matter — the product also calls it a case — carries an internal number unique
+to your firm, a court number once one exists, a matter type, a jurisdiction, a
+phase, and two fields it cannot go active without: a **statute deadline** and a
+**lead attorney**.
+
+Inside a matter, work is split across tabs:
+
+| Tab | What lives there |
+| --- | --- |
+| Overview | Strength, open alerts, next actions, recent developments |
+| Parties | Who is involved, and the conflict check they trigger |
+| Documents | The case file — everything filed on the matter |
+| Analysis | Scores, developments, gaps, contradictions, actions, the memo |
+| Chronology | Every dated event the documents produced, in order |
+| Tasks | The board for this matter |
+| Messages | Case-team threads and the client channel |
+| Team | Who is on the matter, outside grants, ethical walls |
+| Client | What has been released, and the client's accounts |
+| Settings | The matter's own fields, status and retention |
+
+## Two planes of authority
+
+Your **firm role** decides what you are capable of. Your **case assignment**
+decides whether a matter exists for you at all. The effective answer is the
+intersection, minus any ethical wall — and a wall always wins.
+
+A matter you are not on is not hidden from you in a list. It is absent from the
+list, the counts and the search alike.
+
+<Callout type="info">
+  A firm administrator is the clearest illustration: they run the roster and the
+  billing, so they can see that a matter exists and manage who is on it, and
+  they cannot open the file. That is deliberate, and no setting changes it.
+</Callout>
+
+## The analysis reads the file, not your notes
+
+When a document is filed it is read in the background — the text is extracted
+with its page numbers intact, so anything the analysis says can be traced to a
+page. An analysis run then works through the file in stages and writes a new
+version: a case summary, the legal research, a theory and damages model, a set
+of scores, a memo, and the developments since last time.
+
+Privileged and work-product documents are excluded from all of it. So are
+documents that have been withdrawn, and documents recorded on the matter with no
+file behind them.
+
+## Nothing the engine writes is final
+
+Every finding can be approved, rejected, marked incorrect or suppressed. Scores
+can be overridden with a reason. Chronology rows can be corrected, struck or
+frozen, and a row you touch stops being the engine's. Facts you record are
+handed to every later run.
+
+## Where to go next
+
+- [Your first matter](/start/first-matter) walks the whole path once.
+- [Roles and what they reach](/start/roles) is the permission reference.
+- [How the analysis works](/analysis) explains runs, stages and versions.

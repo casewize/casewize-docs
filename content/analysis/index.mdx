@@ -1,0 +1,105 @@
+---
+title: How the analysis works
+description: Runs, versions, the nine stages, what starts a run, and what happens when one fails.
+---
+
+import { Callout } from "nextra/components"
+
+# How the analysis works
+
+An **analysis run** reads the matter's documents and writes a numbered
+**version**. Scores, developments, gaps, contradictions, actions and the memo
+all hang off that version. Nothing is overwritten: v4 does not erase v3, and the
+current analysis is simply the newest successful run.
+
+## Starting one
+
+The first analysis runs as soon as a document has been read. After that:
+
+**Automatically**, when the file changes in a way that matters — a document
+added, replaced or withdrawn; a deposition added; discovery received; damages
+evidence added; a witness added; a ruling entered; a deadline changed; an
+attorney recorded a fact; the claims changed; a recommended action completed;
+the phase changed.
+
+**By hand**, with **Analyse** / **Re-analyse** on the Analysis tab.
+
+Attorneys, paralegals and firm owners can run an analysis. Only an attorney can
+approve its output.
+
+## The nine stages
+
+A run works through the file in order. Each stage writes its own row, and you
+can watch them land one at a time.
+
+| Stage | What it does |
+| --- | --- |
+| **Knowledge base** | The same party, spelled four ways, resolved. Parties, facts, timeline events and the evidence list every later stage cites into. |
+| **Case summary** | States the matter neutrally. |
+| **Research checklist** | The questions this matter raises. |
+| **Analogous precedents** | Decisions that resemble this one. |
+| **Legal research** | Authority for the questions asked. |
+| **Theory and damages** | The theory, the damages model, the defences to expect. |
+| **Scoring** | Prices the judgement already made. |
+| **Memo** | The prose an attorney reads first. |
+| **Developments** | What changed, and what to do about it. |
+
+Grouped into five phases on the run review screen: ingest, frame and retrieve,
+structure, score and decide, compose and commit.
+
+## Citations, not quotations
+
+Stages cite an **index into the evidence list**, never a quote they composed.
+The index resolves back to the fact, the document and the page.
+
+<Callout type="info">
+  This is the point: the worst a model can do is cite the wrong index, which
+  points at a real passage that visibly does not support the claim. It cannot
+  invent a passage that does not exist.
+</Callout>
+
+Every citation in the product shows the document and the page — *p. 14* — and
+clicking it opens the document there.
+
+## Stage states
+
+| State | Meaning |
+| --- | --- |
+| **Queued** | Not started. |
+| **Running** | In progress. |
+| **Complete** | Succeeded. |
+| **Carried forward** | Nothing it depends on changed, so the previous run's result was reused. |
+| **Skipped** | It could be skipped, and it was. |
+| **Failed** | It did not finish. |
+
+Some stages are **required**: if one fails, the run ends there. The rest are
+**skippable**: the run carries on without them and the step records why. A run
+where that happened is *Partly complete*.
+
+## Run states
+
+Queued · Running · Complete · Partly complete · Failed · **No change** — the run
+finished and found nothing that moved the matter.
+
+## Full and incremental runs
+
+A run is either **full** or **incremental**. An incremental run reuses what has
+not changed and re-does what has, which is why a stage can show as *carried
+forward from run 6*.
+
+## Nothing to analyse
+
+If every document on the matter is privileged, work product, withdrawn or has no
+file behind it, there is nothing the analysis may read and it will say so rather
+than produce an empty run. See [What the analysis
+reads](/analysis/coverage).
+
+## Reviewing what it produced
+
+Every finding carries the same set of decisions: **Approve**, **Reject**, and
+under *More* — mark as incorrect, mark as privileged, suppress. A rejected
+finding is not raised again.
+
+Only an attorney with a bar number on file can approve AI output. That authority
+is derived from the licence recorded on the account, not granted by an
+administrator.

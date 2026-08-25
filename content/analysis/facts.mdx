@@ -1,0 +1,52 @@
+---
+title: Your facts
+description: Recording what the documents do not contain, and locking a fact so later runs treat it as settled.
+---
+
+import { Callout } from "nextra/components"
+
+# Your facts
+
+The analysis reads documents. Some of what an attorney knows was never written
+down — a call, a concession made in a corridor, a client's account of something
+no record captures.
+
+**Your facts**, on the Analysis tab, is where that goes. State one fact, as you
+would to a colleague.
+
+## What recording a fact does
+
+A fact you record is given to **every later analysis**. Adding one re-runs the
+analysis, so the effect is immediate rather than waiting for the next document.
+
+## Locking a fact
+
+A **locked** fact is treated as **settled** rather than as something to re-test
+against a document that appears to disagree with it.
+
+<Callout type="info">
+  This is the difference that matters. An unlocked fact is one more input the
+  engine weighs. A locked one is ground truth: if a document contradicts it, the
+  document is the thing in question, not your fact.
+</Callout>
+
+Lock on the way in with **Lock as verified**, or lock and unlock afterwards.
+
+## Excluding a fact
+
+A fact can be marked **excluded** — kept on the record, not given to runs. Use it
+for something that turned out to be wrong, where deleting it would lose the
+history of having believed it.
+
+**Remove** deletes it outright.
+
+## Facts versus the chronology
+
+They are different tools.
+
+- A **fact** is a proposition. It has no date and is handed to every stage of
+  every run.
+- A **chronology event** is something that happened on a date. Adding one by
+  hand is for what no document records — the call, the meeting with no minutes.
+
+See [Chronology](/chronology).

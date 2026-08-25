@@ -1,0 +1,99 @@
+---
+title: Your first matter
+description: A walkthrough from opening a matter to reading its first analysis and releasing something to the client.
+---
+
+import { Callout, Steps } from "nextra/components"
+
+# Your first matter
+
+This is the whole path once, end to end. Every step has a page of its own if you
+want the detail.
+
+<Steps>
+
+### Record your bar number
+
+If you are an attorney, open **Your account** and record your state bar number
+and the state that issued it. Approval authority is derived from that licence,
+not granted by a checkbox: without it you cannot be made lead on a matter and
+cannot approve AI output.
+
+### Open the matter
+
+**New case** starts a four-step intake. Step 1 is the matter itself — internal
+number, case title, matter type, jurisdiction, court, phase. Nothing is checked
+yet, and the moment you continue it is saved as a draft only you can see.
+
+### Attach the parties
+
+Step 2. Add the client first, then anyone else — opposing party, opposing
+counsel, insurer, witnesses. Each one runs a conflict check against every party
+on every matter the firm has ever opened, as the system rather than as you, so
+it sees matters you cannot.
+
+If something matches, an attorney has to clear it in writing with a reason
+before the matter can leave draft.
+
+### Set the deadline and the lead
+
+Step 3, and the two fields a live matter cannot exist without: the statute
+deadline, and a lead attorney. Only members with a bar number on file appear in
+the lead list.
+
+### Review and activate
+
+Step 4 shows exactly what activating writes: the matter goes live with your id
+on it permanently as creator, the parties and their roles are kept, the conflict
+result and your reason are kept whether it came back clear or not, and the
+access rows are computed.
+
+Two people can open it at this point — you, and the lead. Nobody else at the
+firm has an access row, so for them the matter does not exist.
+
+### File the documents
+
+Open **Documents → Upload**. Files go straight to storage from your browser.
+Mark anything privileged or work product *now*, on the upload form, rather than
+after review — that tick is what keeps it out of the analysis.
+
+Each document is read in the background. It appears in the list immediately; its
+text becomes searchable and quotable when the read finishes.
+
+### Let the analysis run
+
+The first analysis starts as soon as a document has been read, or you can start
+one by hand from the **Analysis** tab. Watch it run if you want to see the
+stages land one by one.
+
+When it finishes you have a case summary, a set of scores with an overall
+strength, evidence gaps, contradictions, recommended actions and a memo — every
+finding citing the document and page it came from.
+
+### Work the findings
+
+Turn a recommended action into a task. Answer the duplicate matches waiting on a
+decision. Correct any chronology row the extractor got wrong. Record facts the
+documents do not contain. Each of those feeds the next run.
+
+### Release something to the client
+
+Invite the client from the **Client** tab, then release a document from
+**Documents**. Only the lead attorney can release, one document at a time, and
+the client sees that document and nothing else on the matter.
+
+</Steps>
+
+<Callout type="warning">
+  Releasing is the one action in the product that reaches outside the firm.
+  Revoking later stops future access; it cannot recall what has already been
+  read.
+</Callout>
+
+## What happens on its own after that
+
+- A new document is read, and an analysis re-runs against the changed file.
+- Developments appear under **What changed**, with the score movement they caused.
+- Alerts are raised for the things that need attention, at the severity you chose.
+- Deadlines inside 30 days and matters with no activity for 30 days surface on
+  the dashboard under **Needs attention**.

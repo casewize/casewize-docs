@@ -1,0 +1,78 @@
+---
+title: People and invitations
+description: Inviting colleagues, changing a role, deactivating a member, and the access-change log.
+---
+
+import { Callout } from "nextra/components"
+
+# People and invitations
+
+## Firm members
+
+The roster shows every member with their role, how many matters they are on,
+how many they lead, whether they can approve AI output, their state, and their
+last session.
+
+A role here is the **ceiling**. None of it reaches a matter until they are
+assigned to one.
+
+## Inviting a colleague
+
+**Invite** sends a link to a work email. It expires in **seven days**, and
+joining through it verifies the address.
+
+The roles you can hand out from this screen: firm admin, attorney, paralegal,
+staff, billing.
+
+<Callout type="info">
+  Clients and outside experts are **not** invited here. A client belongs to a
+  matter; an outsider gets a scoped grant with an expiry. Both are created
+  through the case.
+</Callout>
+
+**Waiting on an answer** lists open invitations with who sent each and when it
+expires. **Cancel** withdraws one.
+
+## Changing a role
+
+**Manage member → Role**. Nobody may change their own role: being able to raise
+your own would make every other permission in the product decorative.
+
+Your firm may require your password again before this takes effect — see
+[Authentication](/firm/authentication).
+
+## Deactivating a member
+
+**Deactivate** ends their access to the firm. It is reversible with **Restore
+access**, though not by them.
+
+Two refusals you may hit:
+
+- **They still lead at least one matter.** Transfer the lead first. A case
+  cannot be left without a lead attorney, even for an afternoon.
+- **A firm cannot be left without an owner.**
+
+<Callout type="info">
+  A deactivated member is never deleted. Their name stays on every approval,
+  release and audit line they created, with the role they held at the time.
+</Callout>
+
+## The other panels on this tab
+
+**External access, across every matter** — every outstanding grant, the number
+of documents it reaches, and which are expiring. Created from the matter, never
+from here.
+
+**Client accounts** — portal-only accounts, counted separately from members
+because a client reads a released list and never the case record.
+
+**Ethical walls** — every wall in place, as *person — matter*, with who set it
+and when. Set from the matter it applies to. See [Ethical walls](/team/walls).
+
+**Recent access changes** — invitations, case grants, walls and deactivations,
+sorted by time.
+
+<Callout type="warning">
+  Recent access changes is **not the audit log**. It is the four
+  access-affecting writes this screen records, and nothing else.
+</Callout>

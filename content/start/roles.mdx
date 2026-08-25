@@ -1,0 +1,96 @@
+---
+title: Roles and what they reach
+description: The eight firm roles, what each is capable of, and the four things a role still does not give you.
+---
+
+import { Callout } from "nextra/components"
+
+# Roles and what they reach
+
+A firm role is a **ceiling**. It says what you are capable of once you are on a
+matter. It never puts you on one.
+
+The live version of this table is in **Firm Settings → Roles & access**, which
+also shows it for your firm's own configuration.
+
+## The eight roles
+
+| Role | In one line |
+| --- | --- |
+| **Firm owner** | Billing, the plan, the firm itself, and the only role that can lift a legal hold. |
+| **Firm admin** | Users, invitations, assignments and configuration — and no automatic access to any case file. |
+| **Attorney** | Case work, plus sole authority to approve AI output. |
+| **Paralegal** | Substantive case work. Drafts, never approves. |
+| **Staff** | Upload, index, schedule. No AI run, no valuation, no client contact. |
+| **Billing** | Invoices, usage and the plan. Case metadata only, never contents. |
+| **External** | Nothing by default. Exists to receive a scoped, expiring grant to named documents. |
+| **Client** | Portal only. Reads what has been released, never the case. |
+
+## What each role may do
+
+| | Owner | Admin | Attorney | Paralegal | Staff | Billing |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: |
+| Open a case file | ● | | ● | ● | ● | |
+| Write to a case file | ● | | ● | ● | | |
+| Create a matter | ● | | ● | | | |
+| Add people to a matter | ● | ● | ● | | | |
+| Advance the phase | ● | | ● | | | |
+| Close a matter | ● | | ● | | | |
+| Reopen a closed matter | ● | | | | | |
+| Upload documents | ● | | ● | ● | ● | |
+| Change a document's sensitivity flags | ● | | ● | | | |
+| Run an analysis | ● | | ● | ● | | |
+| Approve AI output | ● | | ● | | | |
+| Release to the client | ● | | ● | | | |
+| Set an ethical wall | ● | | ● | | | |
+| Transfer the lead | ● | | ● | | | |
+| Set a legal hold | ● | | ● | | | |
+| Lift a legal hold | ● | | | | | |
+| Invite and manage members | ● | ● | | | | |
+| Read the audit log | ● | ● | ● | | | |
+| Manage billing | ● | | | | | ● |
+
+## Four things a tick above still does not give you
+
+**Being on the matter.** Every capability is conditional on an assignment. A
+role never puts anyone on a case.
+
+**Holding the lead.** Releasing to a client needs the lead attorney on that
+specific matter — not any attorney on it, and not the firm owner unless they
+hold the lead.
+
+**A bar number on file.** Approving AI output is derived from licensure. It is
+recorded on your account, never granted by an administrator.
+
+**No wall on that matter.** An ethical wall is evaluated first and removes the
+matter entirely, so a walled person fails every check identically to someone
+simply not assigned.
+
+## Two things outrank a role entirely
+
+<Callout type="warning">
+  **An ethical wall** is evaluated before anything else and beats every role,
+  including the firm owner's. The walled person sees no trace — absent from
+  lists, search, notifications, AI answers and counts. It is not a locked row.
+
+  **A document's own flags.** Work product and privilege are hardcoded
+  exclusions, not permission checkboxes. No role, no grant and no setting turns
+  them on.
+</Callout>
+
+## Roles that are never invited from the People screen
+
+`client` and `external` are created through a matter, never through the org
+chart. A client belongs to a matter; an outsider gets a scoped grant with an
+expiry. Neither appears in a firm-wide user list, a search result or a team
+picker.
+
+## The firm admin case
+
+`case: assign` without `case: read` is the whole point of the role. The office
+manager runs the org chart, not the files. Opening a case detail gives them a
+permission wall — they know it exists, they cannot read it.
+
+A firm admin *may* assign themselves to a matter. Doing so notifies the firm
+owner, and that notice is what stops "manages access" from quietly becoming "has
+access".

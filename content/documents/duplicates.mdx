@@ -1,0 +1,61 @@
+---
+title: Duplicates and relations
+description: How near-duplicates are proposed, the relations a document can carry, and why nothing is merged automatically.
+---
+
+import { Callout } from "nextra/components"
+
+# Duplicates and relations
+
+Detection compares documents as they arrive and proposes pairs. **Nothing is
+merged either way** — a person decides.
+
+<Callout type="info">
+  Auto-merging a near-duplicate is how the one copy carrying a handwritten note
+  in the margin disappears. Detection proposes; a person confirms.
+</Callout>
+
+## Answering a proposal
+
+A banner on the documents tab counts the pairs awaiting a decision. Opening it
+shows each pair with a similarity percentage where one could be computed.
+
+Two answers:
+
+- **Same document** — recorded as the same document.
+- **Different** — recorded as two different documents.
+
+Either way the decision is stored with your name and the time, and nothing is
+merged or deleted. Answered pairs move to *Already decided*.
+
+## The relations a pair can carry
+
+| Relation | Inverse |
+| --- | --- |
+| Duplicate of | Duplicate of |
+| Near-duplicate of | Near-duplicate of |
+| Supersedes | Superseded by |
+| Attachment of | Has attachment |
+| Exhibit of | Has exhibit |
+| Responds to | Answered by |
+| Excerpt of | Excerpted in |
+
+They appear under **Related documents** on the detail sheet, from both sides.
+
+## Versions
+
+A document can carry several versions — *v2 — current*, *v1 — superseded* — each
+recording who filed it. The current version is what the viewer opens and what
+the analysis reads.
+
+## Arrivals versus duplicates
+
+These are different things.
+
+An **arrival** is the same bytes reaching the firm again — from another
+custodian, or by another route. Filing them records another arrival on the
+existing document rather than creating a second one. One stored object, several
+rows under *Where it came from*.
+
+A **duplicate** is two documents whose text is similar enough that they may be
+the same thing. That is a judgement, and it is yours.

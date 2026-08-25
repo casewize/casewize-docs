@@ -1,0 +1,71 @@
+---
+title: Phase, status and holds
+description: Advancing the phase, closing and reopening a matter, retention, and what a legal hold freezes.
+---
+
+import { Callout } from "nextra/components"
+
+# Phase, status and holds
+
+## Phase
+
+Where the litigation actually stands: **Investigation → Discovery → Expert
+reports → Mediation → Trial**. Advance or revert it from the overview tab.
+
+Advancing re-evaluates what the client is allowed to see and **releases
+nothing** — that stays one deliberate click by the lead attorney. Reverting
+never un-shares what was already shared.
+
+A phase change is one of the triggers that starts a fresh analysis run.
+
+<Callout type="info">
+  The analysis has a phase vocabulary of its own, finer than this one — intake,
+  pre-filing, pleadings, written discovery, depositions, expert discovery,
+  mediation, summary judgment, pretrial, trial preparation. It is what the
+  engine judges the matter to be in, and it appears on each run.
+</Callout>
+
+## Status
+
+| Status | Meaning |
+| --- | --- |
+| **Draft** | An unfinished intake. Only its creator sees it. |
+| **Active** | Live. |
+| **On hold** | Paused, and still counted against your plan's active-matter limit. |
+| **Closed** | Frozen for every role. |
+| **Archived** | Past its retention window. |
+
+## Closing a matter
+
+**Close the matter** on the overview tab. An **outcome** is required — settled,
+dismissed, verdict, and so on.
+
+Closing freezes writes for every role and starts the retention clock. Nothing on
+a closed matter is editable by anybody: its tasks go read-only, its message
+composer disappears while the history stays, and its settings stop saving.
+
+Only the firm owner can reopen it.
+
+## Retention
+
+Retention comes from the firm profile — a number of years after closing, set in
+**Firm Settings → Firm**. The clock starts at close, not at open.
+
+A legal hold outranks it: a held matter is never deleted, whatever the retention
+setting says.
+
+## Legal hold
+
+A legal hold freezes deletion of the matter and everything under it — documents,
+versions, and the audit trail. Setting one requires a typed reason, kept
+permanently.
+
+- An attorney or the firm owner can **set** a hold.
+- Only the firm owner can **lift** one, with a reason kept forever.
+- The hold stops deletion, not editing. Fields still save; nothing is destroyed
+  while it is on.
+
+<Callout type="warning">
+  Destroying material the firm is required to keep can be treated as destroying
+  evidence. That is why lifting a hold sits with one person and is recorded.
+</Callout>

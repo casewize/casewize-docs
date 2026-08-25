@@ -1,0 +1,73 @@
+---
+title: Billing and plans
+description: The four plans, what happens when a limit is hit, trials, failed payments, and what stays readable.
+---
+
+import { Callout } from "nextra/components"
+
+# Billing and plans
+
+**Firm Settings → Billing** shows the current plan, its status, usage against
+each meter, and every tier including the one you are on.
+
+Firm owners and the billing role can manage it.
+
+## Status
+
+| Status | |
+| --- | --- |
+| **Trial** | A new firm's first 30 days. |
+| **Active** | |
+| **Payment failed** | We could not take payment. Full access continues while we retry — update the card. |
+| **Paused** | |
+| **Cancelled** | The plan ends at the close of the current period. |
+
+## Usage meters
+
+Active matters · People · Documents stored · Analyses this period.
+
+Active matters counts both **active** and **on hold**. Drafts are free. Seats
+count members **and pending invitations** — an invitation nobody has accepted
+still holds a seat.
+
+## When a limit is hit
+
+The product refuses the new thing and tells you which limit and by how much. It
+never deletes, hides or degrades what is already there.
+
+<Callout type="info">
+  **New work is paused** — the trial ended, or the subscription is not active.
+  Every matter, document and analysis stays readable and downloadable. Choose a
+  plan to add new work again.
+</Callout>
+
+Typical refusals:
+
+- Your plan covers *n* active matters and your firm has *m*.
+- Every seat on your plan is taken, counting invitations nobody has accepted yet.
+- Your plan allows *n* documents per matter and this one already has *m*.
+- That file is over the single-file limit on your plan.
+- Your firm has used *x* of its *y* of document storage.
+- Your plan includes *n* analyses per billing period and your firm has used *m*.
+- The client portal / messaging is not included in your firm's plan.
+
+## Changing plan
+
+Pick a tier to compare it — nothing is charged until you continue.
+
+- Moving onto a paid plan changes it as soon as the card is saved. **A trial
+  still runs to its end date before anything is charged.**
+- Moving between paid plans is handled by Stripe, including the proration and
+  the invoice for the difference.
+- **Enterprise** is negotiated. Contact sales.
+- The trial is only available when a firm first signs up.
+
+**Manage billing** opens Stripe for plan changes, invoices, receipts and
+cancellation.
+
+## The numbers
+
+See [Plans and limits](/reference/limits) for the full table.
+
+If the screen says *billing is not configured on this deployment*, this install
+has no payment provider wired up. Contact your account team.

@@ -1,0 +1,62 @@
+---
+title: Chronology
+description: The timeline built from the documents, and what happens to a row you correct, strike or freeze.
+---
+
+import { Callout } from "nextra/components"
+
+# Chronology
+
+The chronology is built from the documents as they land — every dated event the
+analysis extracted, merged across documents and put in order. Each row shows how
+many documents it came from.
+
+It is also what the case summary, research checklist and theory stages read, so
+a wrong row is not cosmetic.
+
+## Correcting a row
+
+**Correct this event** replaces the extracted wording with yours.
+
+<Callout type="warning">
+  A row you touch stops being the engine's. Correcting, striking or freezing a
+  row takes it off the engine **for good** — no later run rewrites it.
+</Callout>
+
+## The fields
+
+**Date** — as the record puts it. *Early 2020* is a real answer.
+
+**Sorts under** — optional. Where a fuzzy date belongs in the order. Leave it
+empty and the row sorts last.
+
+**What happened** — one sentence.
+
+**Who was involved** — names, separated by commas.
+
+## Adding an event by hand
+
+**Add event** is for what no document records — the call, the meeting with no
+minutes. It is yours from the start; no run will ever touch it. Rows added this
+way are marked *Added by hand*.
+
+## Striking and restoring
+
+**Strike from the chronology** removes a row from the timeline without deleting
+it. Struck rows are hidden; **Show struck rows** brings them back, and **Put
+back** restores one.
+
+A row the documents no longer support is marked *No longer in the documents*
+rather than vanishing.
+
+## Freezing a date
+
+**Freeze this date** pins a row so runs will not rewrite it — useful where the
+extractor keeps re-deriving a date you have already settled. **Hand back to the
+engine** unfreezes it, and a later run may then rewrite it.
+
+## Chronology versus facts
+
+A chronology event happened on a date. A [fact](/analysis/facts) is a
+proposition with no date, handed to every stage of every run. Use the one that
+fits what you are recording.

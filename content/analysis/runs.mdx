@@ -1,0 +1,84 @@
+---
+title: Reviewing a run
+description: Watching a run live, the step ladder, what a failed or carried-forward step means, and the audit history.
+---
+
+import { Callout } from "nextra/components"
+
+# Reviewing a run
+
+**Watch it run** while one is in flight, or **Review the run** afterwards, opens
+the run review screen: one version of the analysis, step by step.
+
+## The ladder
+
+The left rail lists the nine steps in order, grouped into five phases — ingest,
+frame and retrieve, structure, score and decide, compose and commit. Each step
+shows what it is for:
+
+| Step | Its job |
+| --- | --- |
+| Knowledge base | The same party, spelled four ways, resolved |
+| Case summary | State the matter neutrally |
+| Research checklist | The questions this matter raises |
+| Similar cases | Analogous decisions |
+| Legal research | Authority for the questions asked |
+| Theory and damages | The theory, the damages, the defences to expect |
+| Case assessment | Price the judgement already made |
+| Memorandum | The prose an attorney reads first |
+| Developments | What changed, and what to do about it |
+
+## Watching live
+
+While a run is going the header shows **Live**, and a ticker across the top
+tracks elapsed time, steps finished, current case strength, and steps needing a
+look.
+
+Each panel fills in the moment its step writes its row — you do not have to wait
+for the run to finish. Scroll away and the screen **detaches** from the live
+step rather than dragging you along; scroll back to follow again.
+
+## Required and skippable steps
+
+Each step says which it is.
+
+**Required** — if it fails, the run ends there.
+
+**Can be skipped** — if it fails the run carries on without it, and the step
+records why. You will see *the run carried on without it; nothing below was
+blocked*.
+
+## Carried forward
+
+A step marked **carried forward from run 6** was reused: nothing it depends on
+had changed. That is what makes an incremental run cheap.
+
+## Not recorded
+
+A step with **Not recorded** finished without writing a row — usually because
+the step did not exist when that run ran. It is shown anyway so the ladder reads
+the same on every run.
+
+## Inside the knowledge base step
+
+The first step is worth opening on its own. It shows the resolved parties with
+their aliases (*aka …*), the fact and event counts, what is new since the last
+run, the chronology it built, and the **evidence list** every later stage cites
+into.
+
+<Callout type="info">
+  Stages cite an index into that list, never a quote they composed. The index
+  resolves back to the fact, the document and the page — so the worst a model can
+  do is cite the wrong one, which points at a real passage that visibly does not
+  support the claim.
+</Callout>
+
+If the generative merge was unavailable, the step says so: parties were resolved
+by normalisation alone, and the knowledge base is usable and may be coarser than
+usual.
+
+## Audit history
+
+**Audit history** on the Analysis tab records everything that happened to the
+analysis on this matter, including what the engine itself did — actor *Analysis
+engine*. **Export CSV** takes the lot.

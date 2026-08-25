@@ -1,0 +1,60 @@
+---
+title: Authentication
+description: Requiring two-factor across the firm, step-up re-authentication, and who is covered.
+---
+
+import { Callout } from "nextra/components"
+
+# Authentication
+
+Firm owners and administrators set two policies here. Both apply to every member.
+
+## Two-factor required for every member
+
+<Callout type="info">
+  A single compromised password against a privileged document store is the whole
+  risk in one event. That is why this is a firm rule and not a per-person
+  preference.
+</Callout>
+
+Turning it on stops anyone not yet enrolled **on their next request** — not at
+their next sign-in — until they have set it up. The screen tells you how many
+members that is before you save.
+
+**Who is covered** counts enrolled members against active members and names the
+ones without a second factor.
+
+Members enrol from [Your account](/account). If somebody genuinely cannot set it
+up, an administrator can lift the requirement here.
+
+## Re-authenticate before an irreversible act
+
+Some acts cannot be undone. Asking for the password again at the moment of the
+act costs three seconds and turns the most dangerous clicks in the product into
+deliberate ones.
+
+Three acts can be covered:
+
+| Act | Why it is on the list |
+| --- | --- |
+| **Changing a colleague's role** | A role is the ceiling on every matter they are assigned to. |
+| **Deactivating a member** | Ends their access to the firm. Reversible, but not by them. |
+| **Weakening this policy** | Turning the two-factor requirement off, or removing an act from this list. |
+
+Strengthening the policy never asks.
+
+## The confirmation prompt
+
+When one fires you get **Confirm your password** — your current password, and
+nothing else. *It takes three seconds and it is what stops an unattended screen
+from becoming an incident.*
+
+A wrong password fails the act; nothing is half-applied.
+
+## Errors
+
+| Message | Meaning |
+| --- | --- |
+| Your role cannot change the firm's authentication policy | Owner or administrator only. |
+| Confirm your password to make this change | Step-up is required for this act. |
+| That password is not right | The act was not performed. |

@@ -1,0 +1,55 @@
+---
+title: How documents are read
+description: The reading states in the Review column, what each one means for citations, and how to ask for a document to be read again.
+---
+
+import { Callout } from "nextra/components"
+
+# How documents are read
+
+Every file filed on a matter is read in the background. Reading extracts the
+text **with the page it came from**, which is what lets a finding in the
+analysis point at a page rather than at a document.
+
+Until a document has been read it has no pages, and nothing in it can be cited.
+
+## The reading states
+
+| State | What it means | What to do |
+| --- | --- | --- |
+| **Queued** | Filed and waiting its turn. | Nothing. Pages appear once it has been read. |
+| **Reading** | Being read now. | Nothing. Pages and citations follow when it finishes. |
+| **Stalled** | Queued, and it has not moved since. | Nothing will pick it up on its own. Ask for it to be read again. |
+| **Unreadable** | Reading did not finish. No pages, nothing citable. | Ask for it to be read again. If it keeps failing, the file is likely damaged or is a scan the parser cannot handle. |
+| **Not read** | Nothing has read the file yet, so its length is unknown. | |
+| **No file** | Recorded on the matter with nothing behind it. | Nothing to read. Upload the file if you have it. |
+
+The number of documents currently being read is shown above the list.
+
+## Reading a document again
+
+**Read again** from the document's row menu, from its detail sheet, or on a
+selection of documents at once from the bulk bar.
+
+Bytes already read under the current settings are re-used rather than
+re-parsed, so a re-read of a healthy document is cheap. It is worth doing when a
+document is stalled or unreadable, or after the file itself was replaced.
+
+## What reading does not do
+
+Reading does not classify the document, decide its date, or judge it. It
+produces text and page boundaries. Everything else — the type, the origin, the
+document date, the sensitivity flags — is yours, and the analysis reads those
+back. A document filed as a deposition is read as one.
+
+<Callout type="info">
+  Where a browser cannot draw the file type at all, the viewer falls back to
+  showing what the parser read out of it. If it has not been read yet, there is
+  nothing to show — which is what *Nothing to show yet* in the viewer means.
+</Callout>
+
+## Duplicate detection
+
+As documents are read, their text is compared against what is already on the
+matter, and near-duplicates are proposed for a decision. Nothing is merged
+either way. See [Duplicates and relations](/documents/duplicates).

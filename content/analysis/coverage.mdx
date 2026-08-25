@@ -1,0 +1,60 @@
+---
+title: What the analysis reads
+description: The coverage panel, the four reasons a document is withheld, and the rule no role can change.
+---
+
+import { Callout } from "nextra/components"
+
+# What the analysis reads
+
+Every analysis discloses its own coverage. The panel at the top of the Analysis
+tab reads, for example, *31 read · 4 withheld*, and opening it accounts for
+every document on the matter.
+
+<Callout type="info">
+  Coverage is **disclosed, never chosen**. There is no per-run document picker.
+  What the engine may read is decided by the flags on each document, and the
+  panel tells you what that came to.
+</Callout>
+
+## The five buckets
+
+| Bucket | Why | What it means |
+| --- | --- | --- |
+| **Read** | Text extracted. | Quotable, and cited in the findings. |
+| **Privileged** | The privilege flag. | Never retrieved, never quoted, never produced. |
+| **Work product** | The work-product flag. | The firm's own analysis. Never retrieved, never released. |
+| **Withdrawn** | Taken off the matter. | The engine no longer opens it. |
+| **No file behind it** | Recorded without a document to read. | Off a privilege log, or still uploading. |
+
+## The rule
+
+**Privilege and work product are excluded by the system itself. No role, grant
+or setting turns them on.**
+
+That is the entire mechanism. There is nothing to configure, so there is nothing
+to misconfigure.
+
+## Making a withheld document readable
+
+Only one thing changes a document's bucket, and it is the document itself:
+
+- Clear the **privileged** or **work product** flag on the document, and it
+  becomes eligible on the next run.
+- **Restore** a withdrawn document to the matter.
+- Upload the file behind a document that was recorded without one.
+- Ask for an unreadable document to be [read
+  again](/documents/reading#reading-a-document-again).
+
+## When nothing is readable
+
+Two empty states you may hit on the Analysis tab:
+
+**"Nothing has been filed on this matter yet."** File a document.
+
+**"All 6 documents on this matter are withheld from the analysis."** Everything
+present is privileged, work product, withdrawn, or has no file. The run refuses
+rather than producing an empty analysis.
+
+The same thing said at the moment you press Analyse: *There is nothing on this
+matter the analysis may read.*

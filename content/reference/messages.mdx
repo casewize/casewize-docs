@@ -1,0 +1,88 @@
+---
+title: What a message means
+description: The refusals and warnings the product shows, and what each one is actually telling you.
+---
+
+# What a message means
+
+## Access
+
+| Message | Meaning |
+| --- | --- |
+| You can see this matter exists. You cannot open the file. | Metadata-only access — the firm-administrator position. Not a mistake, and no setting changes it. |
+| You administer this matter. You cannot read it. | The same thing, said on the matter. |
+| That matter is not available to you. | You are not on it. |
+| Your role does not allow that. | Your firm role's ceiling, not your assignment. |
+| Your seat at this firm could not be confirmed. Sign in again. | Your membership changed mid-session. |
+| Firm Settings is administered by the firm. | Owner or administrator only. |
+
+## Opening a matter
+
+| Message | Meaning |
+| --- | --- |
+| Another matter at the firm already uses that file number. | Internal numbers are unique within the firm. |
+| The conflict check has to come back clear, or be cleared in writing, first. | An attorney must clear it with a reason. |
+| A lead attorney has to hold a bar number. | Record it on Your account. |
+| That matter is no longer a draft. | Somebody activated it while your screen was open. |
+
+## The lead
+
+| Message | Meaning |
+| --- | --- |
+| A matter cannot be left without a lead. Transfer it first. | Applies to removing a lead and to deactivating a member who leads one. |
+| The new lead has to be on the matter first. | Add them to the roster, then transfer. |
+| They still lead at least one matter. | Deactivation refused for the same reason. |
+
+## Documents
+
+| Message | Meaning |
+| --- | --- |
+| This document has been released to the client. Revoke that release before withdrawing it. | Release must be revoked first. |
+| Somebody changed this document while your screen was open. | Reload and try again. |
+| This document has no file attached, so there is nothing to read. | Recorded without a file. |
+| Work product and privileged documents cannot be released. | A hardcoded exclusion, not a permission. |
+| One of those documents is not on this matter, or is work product or privileged. | Applies to external grants. |
+| That file didn't match its fingerprint and wasn't filed. | The bytes changed in transit. Nothing was filed. |
+| Document storage isn't configured for this install. | An administrator has to set the storage keys. |
+
+## Analysis
+
+| Message | Meaning |
+| --- | --- |
+| There is nothing on this matter the analysis may read. | Everything present is privileged, work product, withdrawn, or has no file. |
+| Some stages failed. | A skippable stage did not finish. The run carried on, and the step records why. |
+| No change | The run finished and found nothing that moved the matter. |
+| Carried forward | The stage was reused because nothing it depends on changed. |
+
+## Lifecycle
+
+| Message | Meaning |
+| --- | --- |
+| This matter is closed. Reopen it before making changes. | Only the firm owner can reopen. |
+| A legal hold is set. Nothing on this matter can be deleted. | The hold stops deletion, not editing. |
+
+## Plan
+
+| Message | Meaning |
+| --- | --- |
+| Your plan does not stretch this far. | A limit was reached. See [Plans and limits](/reference/limits). |
+| New work is paused on this plan. | Trial over or subscription inactive. Everything stays readable. |
+| Your plan does not include this feature. | A capability, not a limit — the client portal or messaging. |
+| Every seat on your plan is taken. | Counting invitations nobody has accepted yet. |
+
+## Two-factor and step-up
+
+| Message | Meaning |
+| --- | --- |
+| Set up two-factor authentication to continue. | Your firm requires it, and it applies now rather than at your next sign-in. |
+| Confirm your password to make this change. | Step-up re-authentication for an irreversible act. |
+| That code was not accepted. | Usually a phone clock that has drifted. |
+| Too many failed codes. | The account is locked for a short period. |
+
+## Tasks
+
+| Message | Meaning |
+| --- | --- |
+| That would make two tasks depend on each other. | Dependency cycles are refused. |
+| Something it's waiting on is still open. | A prerequisite has to close first. |
+| The matter is closed, so its tasks are read-only. | |

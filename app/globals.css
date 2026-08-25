@@ -1,0 +1,39 @@
+:root {
+  --cw-border: rgb(0 0 0 / 0.1);
+  --cw-border-strong: rgb(0 0 0 / 0.18);
+  --cw-surface: rgb(0 0 0 / 0.03);
+  --cw-surface-hover: rgb(0 0 0 / 0.06);
+  --cw-panel: #fff;
+  --cw-text: #111827;
+  --cw-muted: #6b7280;
+  --cw-accent: #1c4ed8;
+  --cw-accent-fg: #fff;
+  --cw-danger: #b42318;
+  --cw-danger-bg: rgb(180 35 24 / 0.06);
+  --cw-danger-border: rgb(180 35 24 / 0.25);
+}
+
+html.dark {
+  --cw-border: rgb(255 255 255 / 0.12);
+  --cw-border-strong: rgb(255 255 255 / 0.22);
+  --cw-surface: rgb(255 255 255 / 0.05);
+  --cw-surface-hover: rgb(255 255 255 / 0.1);
+  --cw-panel: #111214;
+  --cw-text: #f3f4f6;
+  --cw-muted: #9ca3af;
+  --cw-accent: #6d92f7;
+  --cw-accent-fg: #0b0d12;
+  --cw-danger: #fca5a5;
+  --cw-danger-bg: rgb(252 165 165 / 0.08);
+  --cw-danger-border: rgb(252 165 165 / 0.25);
+}
+
+.cw-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+.cw-logo-sub {
+  font-size: 0.8125rem;
+  color: var(--cw-muted);
+}

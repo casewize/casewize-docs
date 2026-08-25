@@ -1,0 +1,48 @@
+---
+title: Case settings
+description: The matter's own fields, and the states in which the settings tab does not open.
+---
+
+import { Callout } from "nextra/components"
+
+# Case settings
+
+The **Settings** tab edits the matter itself — the same fields the intake
+collected, after it went live. Everything saves as one change, written against
+the matter.
+
+## Identify the case
+
+**Internal number** — unique within the firm. Changing it renames the file
+everywhere it appears.
+
+**Court number** — filled in the day the suit is filed.
+
+**Case title**
+
+## Classify it
+
+Matter type, jurisdiction, court. Your firm's own matter types lead the list.
+
+## What the matter cannot go without
+
+**Statute deadline** and **lead attorney**, both required. The row fails to save
+without them, whatever the screen does.
+
+The lead field is read-only here for most people: handing a matter over is done
+from the **Team** tab, by the outgoing lead or the firm owner, and it carries
+its own decision about whether the outgoing lead stays on the matter.
+
+## When settings will not open
+
+| State | What you see |
+| --- | --- |
+| **Draft** | A draft is edited in the intake wizard, which owns the conflict check and the blockers. Finish it there. |
+| **Closed** | Nothing on a closed matter is editable by any role. Reopening is the firm owner's. |
+| **Read-only for you** | You can open the file but not change it. Nothing is hidden — it simply will not save. |
+| **Walled / metadata-only** | You administer this matter and cannot read it. |
+
+<Callout type="info">
+  A legal hold does not close the settings tab. The hold stops deletion, not
+  editing.
+</Callout>

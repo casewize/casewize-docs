@@ -1,0 +1,73 @@
+---
+title: Filing documents
+description: Uploading to a matter, what the upload form asks for, and why the sensitivity ticks belong there rather than later.
+---
+
+import { Callout } from "nextra/components"
+
+# Filing documents
+
+**Documents → Upload** files one or more documents onto the matter. The files go
+straight to storage from your browser; they do not pass through a form post.
+
+Accepted: PDF, image or Word document, up to 200 MB each — subject to your
+plan's own single-file limit.
+
+## What the form asks for
+
+For each file:
+
+- **Document title** — how it reads in the list. Defaults to the filename.
+- **Type** — pleading, email, deposition, medical record, and so on. See
+  [Type, origin and dates](/documents/classifying).
+- **Origin** — where it came from.
+- **Privileged** / **Work product** — tick now, not later.
+
+<Callout type="warning">
+  A tick here withholds the document from the AI. Privileged and work-product
+  documents are never read by the analysis, never quoted in it, and never leave
+  the firm. You can change this later from the document itself — but the window
+  between filing and reviewing is exactly when it matters.
+</Callout>
+
+## What happens after you press file
+
+1. Each file is **fingerprinted** in the browser.
+2. It is **uploaded** directly to storage.
+3. It is **filed** on the matter and appears in the list immediately.
+4. It is **read** in the background. Its text becomes searchable and quotable
+   when the read finishes.
+
+Reading runs in the background — keep working. Pages and citations appear as
+each document finishes. See [How documents are read](/documents/reading).
+
+## If the file is already on the matter
+
+The fingerprint is checked before anything is filed. If the same bytes are
+already on this matter, you are told which document they were filed as, and
+filing **records where this copy came from** rather than adding a second
+document.
+
+If that same source on that same date is already recorded, there is nothing to
+add and the product says so.
+
+This is why the document detail sheet has a **Where it came from** section: one
+row per arrival. The same file from two custodians is two rows and one stored
+object.
+
+## Documents with no file behind them
+
+A document can exist on a matter with nothing attached — recorded off a
+privilege log, or still uploading. It shows as *Recorded, no file attached*.
+There is nothing to read, so the analysis skips it and it is counted separately
+under coverage.
+
+## Errors you might see
+
+| Message | Meaning |
+| --- | --- |
+| Not added — empty or over the size limit | The file is 0 bytes, or larger than your plan allows. |
+| The upload didn't finish | A network interruption. Try that file again. |
+| That file didn't match its fingerprint and wasn't filed | The bytes changed in transit. Nothing was filed. |
+| Document storage isn't configured for this install | An administrator has to set the storage keys. |
+| Your plan allows *n* documents per matter | See [Plans and limits](/reference/limits). |
