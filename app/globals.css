@@ -30,8 +30,13 @@ html.dark {
 
 .cw-logo {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.4rem;
+}
+.cw-logo-mark {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
 }
 .cw-logo-sub {
   font-size: 0.8125rem;

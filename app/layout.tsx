@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { Footer, Layout, Navbar } from "nextra-theme-docs"
 import { Head } from "nextra/components"
 import { getPageMap } from "nextra/page-map"
@@ -15,12 +16,38 @@ export const metadata: Metadata = {
   },
   description:
     "How to run a matter in CaseWize: intake, documents, analysis, the client portal, tasks and firm settings.",
+  applicationName: "CaseWize Help",
+  manifest: "/images/logo/site.webmanifest",
+  icons: {
+    icon: [
+      {
+        url: "/images/logo/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/images/logo/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/images/logo/favicon.ico",
+    apple: "/images/logo/apple-touch-icon.png",
+  },
 }
 
 const navbar = (
   <Navbar
     logo={
       <span className="cw-logo">
+        <Image
+          className="cw-logo-mark"
+          src="/images/logo/android-chrome-192x192.png"
+          alt=""
+          width={24}
+          height={24}
+          priority
+        />
         <b>CaseWize</b>
         <span className="cw-logo-sub">Help</span>
       </span>
